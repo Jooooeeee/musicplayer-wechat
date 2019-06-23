@@ -1,0 +1,33 @@
+<view class='container'>
+ <view class="search">
+    <view class="searchItem">
+      <icon type="search" size="20" color="rgb(246,110,156)"></icon>
+      <input confirm-type="search" type='text' placeholder='搜索' bindconfirm='searchBtn' ></input>
+    </view>
+  </view>
+  <view class='searchHotContainer' hidden='{{ishidden}}'>
+  <text class='searchHottext'>热门搜索</text>
+  <block wx:for="{{searchHot}}" wx:key="*this">
+  <text class='searchHot'>{{item}}</text>
+  </block>
+  </view>
+  <view class="songlistContainer" hidden='{{!ishidden}}'>
+ <scroll-view
+    scroll-y="ture"
+    style="height:100%;"
+     scroll-with-animation='true'
+  >
+  <block wx:for="{{songs}}">
+  <!-- //封面、歌手、歌名 -->
+  <view class='songs' bindtap='selectsong' data-id='{{item.id}}' data-name='{{item.name}}' data-artists='{{item.artists[0].name}}' >
+  <view class='song'>
+  <text class='songName'>{{item.name}}</text>
+  <text class='artists'>{{item.artists[0].name}}</text>
+  <text class='album'>-{{item.album.name}}</text>
+  </view>
+     <view class="divLine"></view>
+  </view>
+  </block>
+  </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,76 @@
+/**index.wxss**/
+.container{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: columns;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F56E9B;
+  width: 100%;
+  height: 92rpx;
+}
+.searchItem{
+  display: flex;
+  background: #fff;
+  width: 75%;
+  flex-direction: row;
+  border-radius: 10rpx;
+}
+.searchItem input{
+  background: #fff;
+  color:#F56E9B;
+  font-size: 30rpx;
+  
+}
+.searchItem icon{
+  margin: 5rpx;
+  align-self: center;
+}
+.swiper {
+  height: 100%;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.swiper swiper-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide-image{
+  width: 367px;
+  height: 143px;
+}
+.personalizedContainer{
+  width: 95%;
+}
+.personalizedname{
+  display: block;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px
+}
+.personalized{
+  display: flex;
+  flex-direction: column;
+}
+.personalizedlist{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+height: 314px;
+}
+.personalizedimg{
+  width: 110px;
+  height: 110px;
+}
+.personalizedtext{
+  width: 100px;
+  font-size: 28rpx;
+  color: #313131
+}

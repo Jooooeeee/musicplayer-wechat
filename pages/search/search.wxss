@@ -1,0 +1,88 @@
+/* pages/search/search.wxss */
+.container{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: columns;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F56E9B;
+  width: 100%;
+  height: 92rpx;
+}
+.searchItem{
+  display: flex;
+  background: #fff;
+  width: 75%;
+  flex-direction: row;
+  border-radius: 10rpx;
+}
+.searchItem input{
+  background: #fff;
+  color:#F56E9B;
+  font-size: 30rpx;
+  
+}
+.searchItem icon{
+  margin: 5rpx;
+  align-self: center;
+}
+.searchHotContainer{
+  width: 75%;
+  margin-top: 20px;
+
+/* display: flex;
+justify-content: flex-start; */
+}
+.searchHottext{
+  display: block;
+font-size: 32rpx;
+margin-bottom:15px;
+}
+.searchHot{
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 25rpx;
+  background: #F5F5F5;
+  padding: 10px;
+  color:#313131;
+display: inline-block;  
+}
+.song{
+  width: 80%;
+  border-bottom:#313131;
+}
+.songs{
+  width: 100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.songName{
+  font-size: 30rpx;
+  display: block;
+  color:#313131;
+}
+.artists {
+  font-size: 25rpx;
+  color:#313131;
+}
+.album{
+  font-size: 25rpx;
+  color:#313131;
+}
+.songlistContainer{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+.divLine{
+ background: #313131;
+ width: 85%;
+ height: 2rpx;
+}

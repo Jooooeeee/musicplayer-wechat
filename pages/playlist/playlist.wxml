@@ -1,0 +1,16 @@
+ <view class='container'>
+ <text class='playlistName'>{{playlistName}}</text>
+ <block wx:for="{{songs}}">
+  <view class='songs' bindtap='selectsong' data-id='{{item.id}}' data-img='{{item.al.picUrl}}' data-name='{{item.name}}' data-artists='{{item.ar[0].name}}' >
+  <view class='songcontainer'>
+  <image class='songpic' src='{{item.al.picUrl}}'></image>
+  <view class='song'>
+  <text class='songName'>{{item.name}}</text>
+  <text class='artists'>{{item.ar[0].name}}</text>
+  <text class='album'>-{{item.al.name}}</text>
+  </view>
+  </view>
+     <view class="divLine"></view>
+  </view>
+  </block>
+ </view>

@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <view class="searchItem">
+      <icon type="search" size="20" color="rgb(246,110,156)"></icon>
+      <input confirm-type="search" type='text' placeholder='搜索' disabled='true' bindtap='bindViewTap'></input>
+    </view>
+  </view>
+  <view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item.pic}}" class="slide-image" data-id='{{item.song.id}}' bindtap='bindBanner'/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='personalizedContainer'>
+    <text class='personalizedname'>推荐歌单</text>
+    <view class='personalizedlist'>
+    <block wx:for="{{personalized}}">
+      <view class='personalized' data-playid='{{item.id}}' bindtap='selectplaylist'>
+        <image class='personalizedimg' src='{{item.picUrl}}'></image>
+        <text class='personalizedtext'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+</view>

@@ -1,0 +1,64 @@
+<view class="container">
+  <view class='player'>
+    <view class="rotate-disk-container">
+      <view class='swiper-container'>
+        <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <swiper-item>
+            <view class='rotate-disk rotate-360'>
+              <image src="{{picUrl}}"></image>
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class='bg'>
+              <image mode='scaleToFill' src='{{picUrl}}'>
+              </image>
+            </view>
+            <view class='bg-gray'></view>
+            <scroll-view scroll-y="true" scroll-with-animation='true' scroll-top='{{marginTop}}' class='lyric-scroll'>
+              <view class='contentText lyrics-container'>
+                <block wx:for='{{lyrics}}' wx:key="*this">
+                  <text class="lyrics {{currentIndex222 == index ? 'currentTime' : ''}}">{{item[1]}}       </text>
+                </block>
+              </view>
+            </scroll-view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+    <view class='title-container'>
+      <view></view>
+      <view style='margin-left:38px'>
+        <text>{{textsrc}}</text>
+      </view>
+      <image src='../../images/listimg.png' class='listimg' bindtap='bindlist'></image>
+    </view>
+  </view>
+  <view class='action-container'>
+    <view class='slider-container'>
+      <text>{{currentposition}}</text>
+      <slider block-size='14' backgroundColor='#E1E1E1' selected-color='#fff' value="{{slidervalue}}" min="0" max="{{slibermax}}" disabled="true"></slider>
+      <text>{{allposition}}</text>
+    </view>
+    <view class='action-player'>
+      <image class='lastimg' src='../../images/lastimg.png'></image>
+      <image class='playerimg' src="{{pauseStatus===false ?'../../images/pauseimg.png':'../../images/playimg.png'}}" bindtap="bindTapPlay"></image>
+      <image class='nextimg' src='../../images/nextimg.png'></image>
+    </view>
+  </view>
+  <scroll-view class="list" scroll-y hidden='{{listshow}}'  scroll-top="{{audioIndex * 68}}">
+  
+    <view wx:for="{{audioList}}" wx:key="{{index}}">
+      <view id="{{index}}" class="list-one {{index === audioIndex ? 'list-one-choose' : ''}}" hover-class="list-one-choose" bindtap="bindTapChoose" data-id='{{item.id}}'>
+        <view class="name">
+          <text class="list-index">{{index}}</text>
+        </view>
+        <image class="list-one-poster">{{item.picUrl}}</image>
+        <view class="list-one-right">
+          <view class="name">{{item.name}}</view>
+          <view class="author">歌手：{{item.artists}}</view>
+        </view>
+      </view>
+    </view>
+  
+  </scroll-view>
+</view>
